@@ -1,0 +1,6 @@
+name: lando-mariadb-104
+services:
+  defaults:
+    type: mariadb:10.4
+  patch:
+    type: mariadb:10.4.22
