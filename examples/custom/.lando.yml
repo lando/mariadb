@@ -1,0 +1,20 @@
+name: lando-mariadb-custom
+services:
+  custom:
+    type: mariadb:10.3
+    portforward: true
+    creds:
+      user: pirog
+      password: password
+      database: stuff
+    config:
+      database: config/my.cnf
+  customimage: 
+    type: mariadb:custom
+    portforward: true
+    overrides:
+      image: bitnami/mariadb:10.6.5
+tooling:
+  mysql:
+    service: custom
+    cmd: mysql -uroot
