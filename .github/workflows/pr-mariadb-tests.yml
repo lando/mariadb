@@ -22,6 +22,7 @@ jobs:
           - examples/10.3
           - examples/10.4
           - examples/10.5
+          - examples/10.6
           - examples/custom
     steps:
       # Install deps and cache
