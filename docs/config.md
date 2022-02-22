@@ -1,41 +1,9 @@
 ---
-description: Add a highly configurable MariaDB service to Lando for local development with all the power of Docker and Docker Compose.
+title: Configuration
+description: Learn how to configure the Lando MariaDB service.
 ---
 
-# MariaDB
-
-[MariaDB](https://mariadb.org/) is a very common database server which is *EXTREMELY* similar to MySQL but has a guarantee of being open source.
-
-You can easily add it to your Lando app by adding an entry to the [services](https://docs.lando.dev/config/services.html) top-level config in your [Landofile](https://docs.lando.dev/config/lando.html).
-
-[[toc]]
-
-## Supported versions
-
-*   [10.5](https://hub.docker.com/r/bitnami/mariadb)
-*   [10.4](https://hub.docker.com/r/bitnami/mariadb)
-*   **[10.3](https://hub.docker.com/r/bitnami/mariadb)** **(default)**
-*   [10.2](https://hub.docker.com/r/bitnami/mariadb)
-*   [10.1](https://hub.docker.com/r/bitnami/mariadb)
-*   [custom](https://docs.lando.dev/config/services.html#advanced)
-
-## Patch versions
-
-::: warning Not officially supported!
-While we allow users to specify patch versions for this service, they are not *officially* supported, so if you use one, YMMV.
-:::
-
-To use a patch version, you can do something as shown below:
-
-```yaml
-services:
-  myservice:
-    type: mariadb:10.2.21
-```
-
-But make sure you use one of the available [patch tags](https://hub.docker.com/r/bitnami/mariadb/tags) for the underlying image we are using.
-
-## Configuration
+# Configuration
 
 Here are the configuration options, set to the default values, for this service. If you are unsure about where this goes or what this means, we *highly recommend* scanning the [services documentation](https://docs.lando.dev/config/services.html) to get a good handle on how the magicks work.
 
@@ -63,7 +31,7 @@ services:
       database: SEE BELOW
 ```
 
-### Port forwarding
+## Port forwarding
 
 `portforward` will allow you to access this service externally by assigning a port directly on your host's `localhost`. Note that ` portforward` can be set to either `true` or a specific `port` but we *highly recommend* you set it to `true` unless you have pretty good knowledge of how port assignment works or you have a **very** compelling reason for needing a locked down port.
 
@@ -89,7 +57,7 @@ services:
     portforward: 3600
 ```
 
-### Setting custom credentials
+## Setting custom credentials
 
 You can also configure the default `database`, `user` and `password`. However, it is *very important* to note that these things get set the **FIRST TIME YOU START** the service and **ONLY THE FIRST TIME.**
 
@@ -111,7 +79,7 @@ lando destroy -y && lando start
 
 Also note that by default all `mariadb` services have a passwordless `root` user. **DO NOT ALTER THE PASSWORD OF THE ROOT USER.**
 
-### Using a custom MariaDB config file
+## Using a custom MariaDB config file
 
 You may need to override our [default MySQL config](https://github.com/lando/lando/tree/master/plugins/lando-services/services/mariadb) with your own [custom MySQL config](https://mariadb.com/kb/en/library/configuring-mariadb-with-option-files/).
 
@@ -141,5 +109,3 @@ services:
 ## Getting information
 
 You can get connection and credential information about your mariadb instance by running [`lando info`](https://docs.lando.dev/cli/info.html). It may also be worth checking out our [accessing services externally guide](https://docs.lando.dev/guides/external-access.html).
-
-<RelatedGuides tag="Databases"/>
