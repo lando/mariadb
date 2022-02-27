@@ -22,7 +22,7 @@ services:
 *   [10.4](https://hub.docker.com/r/bitnami/mariadb)
 *   **[10.3](https://hub.docker.com/r/bitnami/mariadb)** **(default)**
 *   [10.2](https://hub.docker.com/r/bitnami/mariadb)
-*   [custom](./../config/services.md#advanced)
+*   [custom](https://docs.lando.dev/config/services.md#advanced)
 
 ## Legacy versions
 
