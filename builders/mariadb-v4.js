@@ -10,22 +10,10 @@ const path = require('path');
 module.exports = {
   name: 'mariadb-v4',
   config: {
+    image: 'mariadb',
+    // supported: 'v4', @todo: interpret this in core as allowing all versions
     supported: ['10.11', '10.10', '10.9', '10.8', '10.7', '10.6', '10.5', '10.4', '10.3', '10.2', '10.1'],
     //legacy: ['10.1'],
-    pinPairs: {
-      '10.11': 'mariadb:10.11.4-jammy',
-      '10.10': 'mariadb:10.10.5-jammy',
-      '10.9': 'mariadb:10.9.7-jammy',
-      '10.8': 'mariadb:10.8.8-jammy',
-      '10.7': 'mariadb:10.7.8-focal',
-      '10.6': 'mariadb:10.6.14-focal',
-      // maps to MySQL 5.5, probably different config
-      '10.5': 'mariadb:10.5.21-focal',
-      '10.4': 'mariadb:10.4.30-focal',
-      '10.3': 'mariadb:10.3.39-focal',
-      '10.2': 'mariadb:10.2.44-bionic',
-      '10.1': 'mariadb:10.1.48-bionic',
-    },
     patchesSupported: true,
     confSrc: __dirname,
     creds: {
@@ -42,10 +30,9 @@ module.exports = {
       database: '/opt/bitnami/mariadb/conf/my_custom.cnf',
     },
   },
-  parent: '_service',
+  parent: '_service-v4',
   builder: (parent, config) => class LandoMariaDb extends parent {
     constructor(id, options = {}) {
-      console.log(parent);
       options = _.merge({}, config, options);
       // Ensure the non-root backup perm sweep runs
       // NOTE: we guard against cases where the UID is the same as the bitnami non-root user
@@ -55,7 +42,6 @@ module.exports = {
       options.entrypoint = 'docker-entrypoint.sh';
 
       // Detect version of MariaDB
-      console.log(options);
 
       // Create a Dockerfile.
       // Could start with a Dockerfile that literally just references the bitnami image.
@@ -68,9 +54,8 @@ module.exports = {
       // @todo: make another key to switch to a different operating system...will require flexibility in our scripts.
       // @todo: how to allow users to use their own custom image that uses the mysql base image we use?
       // -> Separate out the image name from pattern lando-service:repository/org/image-name:tage
-      const baseImage = options.customImage ? `${options.customImage}:${options.version}` : `mariadb:${options.version}`;
-      const dockerFileJson = {
-        from: {baseImage: baseImage},
+      const imageFile = {
+        from: {baseImage: `${options.image}:${options.version}`},
         copy: {
           '*.sh': '/',
           'config/my_custom.cnf': '/etc/mysql/conf.d/my_custom.cnf',
@@ -88,17 +73,6 @@ module.exports = {
         entrypoint: options.entrypoint,
         cmd: 'mariadbd',
       };
-      
-      // Generate Dockerfile and save to filesystem.
-      // @todo: Move to a separate function within this class `generateImageFile`.
-      // Could trigger on start/rebuild Lando events...probably not worth it.
-      generator.generate(dockerFileJson).then((dockerFile) => {
-        return fs.writeFileSync(`${tmpDir}/Dockerfile`, dockerFile);
-      }).then(() => {
-        console.log('Dockerfile saved successfully!');
-      }).catch((err) => {
-        console.error('Error saving Dockerfile:', err);
-      });
 
       const mariadb = {
         command: 'mariadbd',
@@ -109,7 +83,7 @@ module.exports = {
         ],
       };
       // Send it downstream
-      super(id, options, {services: _.set({}, options.name, mariadb)});
+      super(id, options, imageFile, {services: _.set({}, options.name, mariadb)});
     };
   },
 };
