@@ -1,0 +1,9 @@
+name: lando-mariadbv4-1011
+services:
+  defaults:
+    type: mariadb-v4-10.11:custom
+
+# This is important because it lets lando know to test against the plugin in this repo
+# DO NOT REMOVE THIS!
+plugins:
+  "@lando/mariadb": ./../../
