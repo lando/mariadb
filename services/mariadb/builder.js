@@ -7,9 +7,9 @@ const _ = require('lodash');
 module.exports = {
   name: 'mariadb',
   config: {
-    version: '10.3',
-    supported: ['10.6', '10.5', '10.4', '10.3', '10.2', '10.1'],
-    legacy: ['10.1'],
+    version: '10.6',
+    supported: ['10.6', '10.5', '10.4'],
+    legacy: ['10.3', '10.2', '10.1'],
     pinPairs: {
       '10.6': 'bitnami/mariadb:10.6.5-debian-10-r30',
       '10.5': 'bitnami/mariadb:10.5.8-debian-10-r74',
