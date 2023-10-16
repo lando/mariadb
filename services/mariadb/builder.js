@@ -62,8 +62,8 @@ module.exports = {
       };
 
       // Host is necessary to check the networked location.
-      options.healthcheck =`mysql --host=${options.name} --user=${options.creds.user}
-        --database=${options.creds.database} --password=${options.creds.password} --silent --execute "SHOW TABLES;"`;
+      options.healthcheck =`mysql --host=${options.name} --user=${options.creds.user} ` +
+        `--database=${options.creds.database} --password=${options.creds.password} --silent --execute "SHOW TABLES;"`;
       // Send it downstream
       super(id, options, {services: _.set({}, options.name, mariadb)});
     };
