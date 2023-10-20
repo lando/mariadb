@@ -2,6 +2,7 @@
 
 // Modules
 const _ = require('lodash');
+const path = require('path');
 
 // Builder
 module.exports = {
@@ -19,7 +20,7 @@ module.exports = {
       '10.1': 'bitnami/mariadb:10.1.47-debian-10-r13',
     },
     patchesSupported: true,
-    confSrc: __dirname,
+    confSrc: path.resolve(__dirname, '..', 'config'),
     creds: {
       database: 'database',
       password: 'mariadb',
@@ -43,6 +44,8 @@ module.exports = {
       // because this messes things up on circle ci and presumably elsewhere and _should_ be unncessary
       if (_.get(options, '_app._config.uid', '1000') !== '1001') options._app.nonRoot.push(options.name);
 
+      if (!options.healthcheck) options.healthcheck = require('../utils/get-default-healthcheck')(options);
+
       const mariadb = {
         image: `bitnami/mariadb:${options.version}`,
         command: '/launch.sh',
@@ -61,6 +64,7 @@ module.exports = {
           `${options.data}:/bitnami/mariadb`,
         ],
       };
+
       // Send it downstream
       super(id, options, {services: _.set({}, options.name, mariadb)});
     };

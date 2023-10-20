@@ -1,3 +1,7 @@
+## v0.9.0 - [Oct 20, 2023](https://github.com/lando/mariadb/releases/tag/v0.9.0)
+* Added a new healthcheck that better assesses service readiness. [#32](https://github.com/lando/mariadb/pull/32)
+* Restructured to use builders/mariadb.js.
+
 ## v0.8.0 - [July 3, 2023](https://github.com/lando/mariadb/releases/tag/v0.8.0)
   * Removed bundle-dependencies and version-bump-prompt from plugin.
   * Updated package to use prepare-release-action.
