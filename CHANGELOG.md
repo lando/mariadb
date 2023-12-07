@@ -1,3 +1,6 @@
+## v1.0.0 - [December 7, 2023](https://github.com/lando/mariadb/releases/tag/v1.0.0)
+    * Dialed fully for `lando update`
+
 ## v0.9.0 - [Oct 20, 2023](https://github.com/lando/mariadb/releases/tag/v0.9.0)
 * Added a new healthcheck that better assesses service readiness. [#32](https://github.com/lando/mariadb/pull/32)
 * Restructured to use builders/mariadb.js.
