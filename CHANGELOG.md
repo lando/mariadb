@@ -1,6 +1,7 @@
 ## v1.0.0 - [December 7, 2023](https://github.com/lando/mariadb/releases/tag/v1.0.0)
 
 * Dialed fully for `lando update`
+* Fixed bug causing improved healthcheck to not load correctly
 
 ## v0.9.0 - [Oct 20, 2023](https://github.com/lando/mariadb/releases/tag/v0.9.0)
 
