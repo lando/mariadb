@@ -26,7 +26,6 @@ module.exports = {
       password: 'mariadb',
       user: 'mariadb',
     },
-    healthcheck: 'mysql -uroot --silent --execute "SHOW DATABASES;"',
     port: '3306',
     defaultFiles: {
       database: 'my_custom.cnf',
