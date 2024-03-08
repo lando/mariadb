@@ -9,6 +9,13 @@ services:
       database: stuff
     config:
       database: config/my.cnf
+  customnopwd:
+    type: mariadb:10.3
+    portforward: true
+    creds:
+      user: pirog
+      password:
+      database: stuff
   customimage:
     type: mariadb:custom
     portforward: true
