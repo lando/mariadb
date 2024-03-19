@@ -1,7 +1,6 @@
 ## v1.2.0 - [March 19, 2024](https://github.com/lando/mariadb/releases/tag/v1.2.0)
 
-* Updated default DB versions. [#45](https://github.com/lando/mariadb/pull/45)
-
+* Updated available version of Mariadb. [#45](https://github.com/lando/mariadb/pull/45)
 
 ## v1.1.0 - [March 8, 2024](https://github.com/lando/mariadb/releases/tag/v1.1.0)
 
