@@ -28,6 +28,7 @@ jobs:
           - examples/10.8
           - examples/10.9
           - examples/10.10
+          - examples/10.11
           - examples/11.0
           - examples/11.1
           - examples/11.2
