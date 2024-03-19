@@ -1,5 +1,11 @@
+## v1.2.0 - [March 19, 2024](https://github.com/lando/mariadb/releases/tag/v1.2.0)
+
+* Updated default DB versions. [#45](https://github.com/lando/mariadb/pull/45)
+
 ## v1.1.0 - [March 8, 2024](https://github.com/lando/mariadb/releases/tag/v1.1.0)
-  * Updated to latest database services.
+
+### Fixes
+* Allow empty password and other creds fields to pass healthcheck [lando/lamp#51](https://github.com/lando/lamp/issues/51)
 
 ## v1.0.0 - [December 7, 2023](https://github.com/lando/mariadb/releases/tag/v1.0.0)
 

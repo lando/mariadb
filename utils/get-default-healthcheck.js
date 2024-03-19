@@ -2,7 +2,7 @@
 
 // checks to see if a setting is disabled
 module.exports = options => {
-  var healthcheck = [
+  let healthcheck = [
     'mysql',
     `--host=${options.name}`,
   ];
@@ -11,12 +11,10 @@ module.exports = options => {
   options.creds.user ? healthcheck.push(`--user=${options.creds.user}`) : false;
   options.creds.database ? healthcheck.push(`--database=${options.creds.database}`) : false;
   options.creds.password ? healthcheck.push(`--password=${options.creds.password}`) : false;
-    
   healthcheck = healthcheck.concat([
     '--silent',
     '--execute',
     '"SHOW TABLES;"',
   ]);
-  
   return healthcheck.join(' ');
 };
