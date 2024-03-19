@@ -18,11 +18,15 @@ services:
 
 ## Supported versions
 
+*   [11.3](https://hub.docker.com/r/bitnami/mariadb)
+*   [11.2](https://hub.docker.com/r/bitnami/mariadb)
+*   [11.1](https://hub.docker.com/r/bitnami/mariadb)
+*   [11.0](https://hub.docker.com/r/bitnami/mariadb)
+*   [10.11](https://hub.docker.com/r/bitnami/mariadb)
 *   [10.6](https://hub.docker.com/r/bitnami/mariadb)
 *   [10.5](https://hub.docker.com/r/bitnami/mariadb)
 *   [10.4](https://hub.docker.com/r/bitnami/mariadb)
 *   **[10.3](https://hub.docker.com/r/bitnami/mariadb)** **(default)**
-*   [10.2](https://hub.docker.com/r/bitnami/mariadb)
 *   [custom](https://docs.lando.dev/core/v3/lando-service.html#overrides)
 
 ## Legacy versions
@@ -33,6 +37,11 @@ While you can currently use some [EOL MariaDB version](https://endoflife.date/ma
 
 You can still run these versions with Lando but for all intents and purposes they should be considered deprecated (e.g. YMMV and do not expect a ton of support if you have an issue).
 
+*   [10.10](https://hub.docker.com/r/bitnami/mariadb)
+*   [10.9](https://hub.docker.com/r/bitnami/mariadb)
+*   [10.8](https://hub.docker.com/r/bitnami/mariadb)
+*   [10.7](https://hub.docker.com/r/bitnami/mariadb)
+*   [10.2](https://hub.docker.com/r/bitnami/mariadb)
 *   [10.1](https://hub.docker.com/r/bitnami/mariadb)
 
 ## Patch versions
