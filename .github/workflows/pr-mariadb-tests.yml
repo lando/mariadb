@@ -24,6 +24,13 @@ jobs:
           - examples/10.4
           - examples/10.5
           - examples/10.6
+          - examples/10.7
+          - examples/10.8
+          - examples/10.9
+          - examples/10.10
+          - examples/11.0
+          - examples/11.1
+          - examples/11.2
           - examples/custom
     steps:
       - name: Checkout code

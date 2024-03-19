@@ -1,0 +1,14 @@
+name: lando-mariadb-1010
+services:
+  defaults:
+    type: mariadb:10.10
+  patch:
+    type: mariadb:10.10.7
+proxy:
+  defaults:
+    - hostname: db.lndo.site
+      port: 3306
+# This is important because it lets lando know to test against the plugin in this repo
+# DO NOT REMOVE THIS!
+plugins:
+  "@lando/mariadb": ../..
