@@ -18,7 +18,6 @@ services:
 
 ## Supported versions
 
-*   [11.3](https://hub.docker.com/r/bitnami/mariadb)
 *   [11.2](https://hub.docker.com/r/bitnami/mariadb)
 *   [11.1](https://hub.docker.com/r/bitnami/mariadb)
 *   [11.0](https://hub.docker.com/r/bitnami/mariadb)
