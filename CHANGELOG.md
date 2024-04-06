@@ -1,3 +1,7 @@
+## v1.3.0 - [April 8, 2024](https://github.com/lando/mariadb/releases/tag/v1.3.0)
+
+* Update available version of Mariadb to 11.3. [#51](https://github.com/lando/mariadb/issues/51)
+
 ## v1.2.0 - [March 19, 2024](https://github.com/lando/mariadb/releases/tag/v1.2.0)
 
 * Updated available version of Mariadb. [#45](https://github.com/lando/mariadb/pull/45)
