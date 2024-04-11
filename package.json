@@ -1,7 +1,7 @@
 {
   "name": "@lando/mariadb",
   "description": "A Lando plugin that provides a tight integration with mariadb.",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "author": "Mike Pirog @pirog",
   "license": "GPL-3.0",
   "repository": "lando/mariadb",
@@ -58,4 +58,3 @@
     "vitepress": "^1.0.0-rc.42"
   }
 }
-
