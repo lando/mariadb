@@ -54,3 +54,4 @@ function sidebar() {
     {text: 'Examples', link: 'https://github.com/lando/mariadb/tree/main/examples'},
   ];
 };
+
