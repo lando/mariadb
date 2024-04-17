@@ -1,0 +1,22 @@
+name: lando-mariadb-tooling
+services:
+  database:
+    type: mariadb:11.3
+tooling:
+  'db-export-test [file]':
+    service: :host
+    cmd: bash ./scripts/sql-export.sh
+    user: 'root'
+    options:
+      host:
+        description: The database service to use
+        default: database
+        alias:
+          - h
+      stdout:
+        description: Dump database to stdout
+
+# This is important because it lets lando know to test against the plugin in this repo
+# DO NOT REMOVE THIS!
+plugins:
+  "@lando/mariadb": ../..
