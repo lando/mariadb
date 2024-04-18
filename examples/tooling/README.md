@@ -23,7 +23,7 @@ Run the following commands to validate things are rolling as they should.
 
 ```bash
 # Should not see deprecation warning on db-export
-lando db-export-test | ( ! grep "Deprecated" )
+lando db-export-test --stdout | grep -vz "Deprecated"
 ```
 
 Destroy tests
