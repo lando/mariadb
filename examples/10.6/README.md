@@ -22,14 +22,14 @@ Verification commands
 Run the following commands to validate things are rolling as they should.
 
 ```bash
-# Should use 10.5.8 as the default version
-lando ssh -s defaults -c "mysql -V | grep 10.6.5"
+# Should use 10.6.18 as the default version
+lando ssh -s defaults -c "mariadb -V | grep 10.6.18"
 
 # Should use the patch version when set by the user
-lando ssh -s patch -c "mysql -V | grep 10.6.4"
+lando ssh -s patch -c "mariadb -V | grep 10.6.4"
 
 # Should use the correct default user pass db
-lando ssh -s defaults -c "mysql -umariadb -pmariadb database -e quit"
+lando ssh -s defaults -c "mariadb -umariadb -pmariadb database -e quit"
 ```
 
 Destroy tests
