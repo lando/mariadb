@@ -8,7 +8,7 @@ next: ./config.html
 
 [MariaDB](https://mariadb.org/) is a very common database server which is *EXTREMELY* similar to MySQL but has a guarantee of being open source.
 
-You can easily add it to your Lando app by adding an entry to the [services](https://docs.lando.dev/core/v3/lando-service.html) top-level config in your [Landofile](https://docs.lando.dev/core/v3).
+You can easily add it to your Lando app by adding an entry to the [services](https://docs.lando.dev/core/v3/services/lando.html) top-level config in your [Landofile](https://docs.lando.dev/core/v3).
 
 ```yaml
 services:
@@ -27,7 +27,7 @@ services:
 *   [10.5](https://hub.docker.com/r/bitnami/mariadb/tags?name=10.5.)
 *   [10.4](https://hub.docker.com/r/bitnami/mariadb/tags?name=10.4.)
 *   **[10.3](https://hub.docker.com/r/bitnami/mariadb/tags?name=10.3.)** **(default)**
-*   [custom](https://docs.lando.dev/core/v3/lando-service.html#overrides)
+*   [custom](https://docs.lando.dev/core/v3/services/lando.html#overrides)
 
 ## Legacy versions
 
