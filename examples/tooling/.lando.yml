@@ -5,7 +5,7 @@ services:
 tooling:
   'db-export-test [file]':
     service: :host
-    cmd: bash ./scripts/sql-export.sh
+    cmd: '/helpers/sql-export.sh'
     user: 'root'
     options:
       host:
