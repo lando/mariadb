@@ -34,6 +34,7 @@ jobs:
           - examples/11.2
           - examples/11.3
           - examples/custom
+          - examples/tooling
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
