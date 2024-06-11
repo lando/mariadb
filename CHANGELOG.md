@@ -1,6 +1,7 @@
 ## {{ UNRELEASED_VERSION }} - [{{ UNRELEASED_DATE }}]({{ UNRELEASED_LINK }})
 
 * Bumped all available MariaDB minor versions. [#56](https://github.com/lando/mariadb/pull/56)
+* Added a test of db-export tooling. [#47](https://github.com/lando/mariadb/issues/47)
 
 ## v1.3.0 - [April 11, 2024](https://github.com/lando/mariadb/releases/tag/v1.3.0)
 
