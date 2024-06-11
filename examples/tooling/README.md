@@ -1,5 +1,5 @@
-MariaDB Example
-===============
+MariaDB Tooling Example
+=======================
 
 This example exists primarily to test the following documentation:
 
