@@ -2,6 +2,7 @@
 
 * Bumped all available MariaDB minor versions. [#56](https://github.com/lando/mariadb/pull/56)
 * Added a test of db-export tooling. [#47](https://github.com/lando/mariadb/issues/47)
+* Removed 10.3 from the list of legacy versions [#25](https://github.com/lando/mariadb/issues/25)
 
 ## v1.3.0 - [April 11, 2024](https://github.com/lando/mariadb/releases/tag/v1.3.0)
 
