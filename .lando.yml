@@ -1,12 +1,9 @@
 name: lando-mariadb-plugin
 services:
   node:
-    type: node:18
-    build:
-      - npm install
-    scanner: false
-    ssl: false
-    sslExpose: false
+    api: 4
+    type: l337
+    image: node:18
 tooling:
   node:
     service: node
