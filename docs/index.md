@@ -18,6 +18,7 @@ services:
 
 ## Supported versions
 
+*   [11.5](https://hub.docker.com/r/bitnami/mariadb/tags?name=11.5.)
 *   [11.4](https://hub.docker.com/r/bitnami/mariadb/tags?name=11.4.)
 *   [11.3](https://hub.docker.com/r/bitnami/mariadb/tags?name=11.3.)
 *   [11.2](https://hub.docker.com/r/bitnami/mariadb/tags?name=11.2.)
