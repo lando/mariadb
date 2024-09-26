@@ -22,8 +22,8 @@ Verification commands
 Run the following commands to validate things are rolling as they should.
 
 ```bash
-# Should use 11.1.5 as the default version
-lando ssh -s defaults -c "mariadb -V | grep 11.1.5"
+# Should use 11.1.6 as the default version
+lando ssh -s defaults -c "mariadb -V | grep 11.1.6"
 
 # Should use the patch version when set by the user
 lando ssh -s patch -c "mariadb -V | grep 11.1.4"
