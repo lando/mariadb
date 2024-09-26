@@ -1,5 +1,7 @@
 ## {{ UNRELEASED_VERSION }} - [{{ UNRELEASED_DATE }}]({{ UNRELEASED_LINK }})
 
+## v1.5.0 - [September 26, 2024](https://github.com/lando/mariadb/releases/tag/v1.5.0)
+
 * Added MariaDB 11.5.
 * Updated pinned image versions to be ARM compatible. 
 
