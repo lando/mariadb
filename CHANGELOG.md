@@ -1,5 +1,7 @@
 ## {{ UNRELEASED_VERSION }} - [{{ UNRELEASED_DATE }}]({{ UNRELEASED_LINK }})
 
+## v1.6.0 - [October 25, 2024](https://github.com/lando/mariadb/releases/tag/v1.6.0)
+
 * Updated release process to generate an edge release when stable releases are created.
 
 ## v1.5.0 - [September 26, 2024](https://github.com/lando/mariadb/releases/tag/v1.5.0)
