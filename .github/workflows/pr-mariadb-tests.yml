@@ -12,7 +12,8 @@ jobs:
       fail-fast: false
       matrix:
         lando-version:
-          - 3-edge-slim
+          - 3-edge
+          - 3-stable
         os:
           - ubuntu-24.04
         node-version:
