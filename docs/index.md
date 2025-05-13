@@ -18,16 +18,10 @@ services:
 
 ## Supported versions
 
-*   [11.5](https://hub.docker.com/r/bitnami/mariadb/tags?name=11.5.)
 *   [11.4](https://hub.docker.com/r/bitnami/mariadb/tags?name=11.4.)
-*   [11.3](https://hub.docker.com/r/bitnami/mariadb/tags?name=11.3.)
-*   [11.2](https://hub.docker.com/r/bitnami/mariadb/tags?name=11.2.)
-*   [11.1](https://hub.docker.com/r/bitnami/mariadb/tags?name=11.1.)
-*   [11.0](https://hub.docker.com/r/bitnami/mariadb/tags?name=11.0.)
 *   [10.11](https://hub.docker.com/r/bitnami/mariadb/tags?name=10.11.)
 *   [10.6](https://hub.docker.com/r/bitnami/mariadb/tags?name=10.6.)
 *   [10.5](https://hub.docker.com/r/bitnami/mariadb/tags?name=10.5.)
-*   [10.4](https://hub.docker.com/r/bitnami/mariadb/tags?name=10.4.)
 *   **[10.3](https://hub.docker.com/r/bitnami/mariadb/tags?name=10.3.)** **(default)**
 *   [custom](https://docs.lando.dev/core/v3/services/lando.html#overrides)
 
@@ -41,10 +35,16 @@ You can still run these versions with Lando but for all intents and purposes the
 
 *   [11.7](https://hub.docker.com/r/bitnami/mariadb/tags?name=11.7.)
 *   [11.6](https://hub.docker.com/r/bitnami/mariadb/tags?name=11.6.)
+*   [11.5](https://hub.docker.com/r/bitnami/mariadb/tags?name=11.5.)
+*   [11.3](https://hub.docker.com/r/bitnami/mariadb/tags?name=11.3.)
+*   [11.2](https://hub.docker.com/r/bitnami/mariadb/tags?name=11.2.)
+*   [11.1](https://hub.docker.com/r/bitnami/mariadb/tags?name=11.1.)
+*   [11.0](https://hub.docker.com/r/bitnami/mariadb/tags?name=11.0.)
 *   [10.10](https://hub.docker.com/r/bitnami/mariadb/tags?name=10.10.)
 *   [10.9](https://hub.docker.com/r/bitnami/mariadb/tags?name=10.9.)
 *   [10.8](https://hub.docker.com/r/bitnami/mariadb/tags?name=10.8.)
 *   [10.7](https://hub.docker.com/r/bitnami/mariadb/tags?name=10.7.)
+*   [10.4](https://hub.docker.com/r/bitnami/mariadb/tags?name=10.4.)
 *   [10.2](https://hub.docker.com/r/bitnami/mariadb/tags?name=10.2.)
 *   [10.1](https://hub.docker.com/r/bitnami/mariadb/tags?name=10.1.)
 
