@@ -2,6 +2,8 @@ name: lando-mariadb-115
 services:
   database:
     type: mariadb:11.5
+  patch:
+    type: mariadb:11.5.2
 
 proxy:
   database:
