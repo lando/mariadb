@@ -39,6 +39,8 @@ While you can currently use some [EOL MariaDB version](https://endoflife.date/ma
 
 You can still run these versions with Lando but for all intents and purposes they should be considered deprecated (e.g. YMMV and do not expect a ton of support if you have an issue).
 
+*   [11.7](https://hub.docker.com/r/bitnami/mariadb/tags?name=11.7.)
+*   [11.6](https://hub.docker.com/r/bitnami/mariadb/tags?name=11.6.)
 *   [10.10](https://hub.docker.com/r/bitnami/mariadb/tags?name=10.10.)
 *   [10.9](https://hub.docker.com/r/bitnami/mariadb/tags?name=10.9.)
 *   [10.8](https://hub.docker.com/r/bitnami/mariadb/tags?name=10.8.)
