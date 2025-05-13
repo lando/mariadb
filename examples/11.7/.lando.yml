@@ -1,9 +1,9 @@
-name: lando-mariadb-114
+name: lando-mariadb-117
 services:
   database:
-    type: mariadb:11.4
+    type: mariadb:11.7
   patch:
-    type: mariadb:11.4.6
+    type: mariadb:11.7.2
 
 proxy:
   database:
