@@ -25,6 +25,9 @@ Run the following commands to validate things are rolling as they should.
 # Should use 11.4.6 as the default version
 lando ssh -s database -c "mariadb -V | grep 11.4.6"
 
+# Should use the patch version when set by the user
+lando ssh -s patch -c "mariadb -V | grep 11.4.6"
+
 # Should use the correct default user pass db
 lando ssh -s database -c "mariadb -umariadb -pmariadb database -e quit"
 ```
