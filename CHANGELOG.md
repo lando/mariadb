@@ -1,9 +1,7 @@
 ## {{ UNRELEASED_VERSION }} - [{{ UNRELEASED_DATE }}]({{ UNRELEASED_LINK }})
 
-* Added MariaDB 11.6 and 11.7 to supported versions.
+* Added support for MariaDB 11.6 and 11.7.
 * Bumped all available MariaDB minor versions.
-* Moved EOL'd versions to legacy.
-* Add patch version testing to 11.4 and 11.5.
 
 ## v1.6.3 - [December 6, 2024](https://github.com/lando/mariadb/releases/tag/v1.6.3)
 
