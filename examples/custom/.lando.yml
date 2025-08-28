@@ -20,7 +20,7 @@ services:
     type: mariadb:custom
     portforward: true
     overrides:
-      image: bitnami/mariadb:10.6.5
+      image: bitnamilegacy/mariadb:10.6.5
 tooling:
   mysql:
     service: custom

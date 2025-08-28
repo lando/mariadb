@@ -1,10 +1,13 @@
 ## {{ UNRELEASED_VERSION }} - [{{ UNRELEASED_DATE }}]({{ UNRELEASED_LINK }})
 
-* Added support for MariaDB 11.6 and 11.7.
-* Bumped all available MariaDB minor versions.
+## v1.7.0 - [August 28, 2025](https://github.com/lando/mariadb/releases/tag/v1.7.0)
+
+* Migrate images to bitnamilegacy repository
 
 ## v1.6.3 - [December 6, 2024](https://github.com/lando/mariadb/releases/tag/v1.6.3)
 
+* Added support for MariaDB 11.6 and 11.7.
+* Bumped all available MariaDB minor versions.
 * Updated the version index.md to get Docuverse page to build correctly.
 
 ## v1.6.2 - [December 4, 2024](https://github.com/lando/mariadb/releases/tag/v1.6.2)
