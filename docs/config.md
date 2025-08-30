@@ -81,7 +81,7 @@ Also note that by default all `mariadb` services have a passwordless `root` user
 
 ## Using a custom MariaDB config file
 
-You may need to override our [default MySQL config](https://github.com/lando/mariadb/tree/main/builders) with your own [custom MySQL config](https://mariadb.com/kb/en/configuring-mariadb-with-option-files/).
+You may need to override our [default MySQL config](https://github.com/lando/mariadb/tree/main/builders) with your own [custom MySQL config](https://mariadb.com/docs/server/server-management/install-and-upgrade-mariadb/configuring-mariadb/configuring-mariadb-with-option-files).
 
 If you do this, you must use a file that exists inside your application and express it relative to your project root as shown below:
 

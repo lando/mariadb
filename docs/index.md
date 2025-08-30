@@ -23,7 +23,7 @@ services:
 *   [10.6](https://hub.docker.com/r/bitnamilegacy/mariadb/tags?name=10.6.)
 *   [10.5](https://hub.docker.com/r/bitnamilegacy/mariadb/tags?name=10.5.)
 *   [10.3](https://hub.docker.com/r/bitnamilegacy/mariadb/tags?name=10.3.)
-*   [custom](https://docs.lando.dev/core/v3/services/lando.html#overrides)
+*   [custom](https://docs.lando.dev/services/lando-3.html#overrides)
 
 ## Legacy versions
 
