@@ -1,8 +1,7 @@
 ## {{ UNRELEASED_VERSION }} - [{{ UNRELEASED_DATE }}]({{ UNRELEASED_LINK }})
 
-## v1.7.0 - [August 28, 2025](https://github.com/lando/mariadb/releases/tag/v1.7.0)
-
-* Migrate images to bitnamilegacy repository
+* Switched images to [bitnamilegacy](https://github.com/bitnami/containers/issues/83267) namespace
+* Updated `mariadb:11.4` to `11.4.7`
 
 ## v1.6.3 - [December 6, 2024](https://github.com/lando/mariadb/releases/tag/v1.6.3)
 
@@ -25,7 +24,7 @@
 ## v1.5.0 - [September 26, 2024](https://github.com/lando/mariadb/releases/tag/v1.5.0)
 
 * Added MariaDB 11.5.
-* Updated pinned image versions to be ARM compatible. 
+* Updated pinned image versions to be ARM compatible.
 
 ## v1.4.0 - [September 24, 2024](https://github.com/lando/mariadb/releases/tag/v1.4.0)
 

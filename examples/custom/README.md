@@ -1,12 +1,10 @@
-MariaDB Example
-===============
+# MariaDB Custom Example
 
 This example exists primarily to test the following documentation:
 
-* [MariaDB Service](https://docs.devwithlando.io/tutorials/mariadb.html)
+* [MariaDB Service](https://docs.lando.dev/plugins/mariadb)
 
-Start up tests
---------------
+## Start up tests
 
 Run the following commands to get up and running with this example.
 
@@ -16,30 +14,28 @@ lando poweroff
 lando start
 ```
 
-Verification commands
----------------------
+## Verification commands
 
 Run the following commands to validate things are rolling as they should.
 
 ```bash
 # Should use the specfied version when set by the user
-lando ssh -s custom -c "mysql -V" | grep "10.3"
+lando exec custom -- mysql -V | grep "10.3"
 
 # Should use the specfied version when set by the user
-lando ssh -s customimage -c "mysql -V" | grep "10.6"
+lando exec customimage -- mysql -V | grep "10.6"
 
 # Should use the user provided creds if given
-lando ssh -s custom -c "mysql -upirog -ppassword stuff -e quit"
+lando exec custom -- mysql -upirog -ppassword stuff -e quit
 
 # Should use the correct default user pass db
-lando ssh -s customimage -c "mysql -umariadb -pmariadb database -e quit"
+lando exec customimage -- mysql -umariadb -pmariadb database -e quit
 
 # Should use a custom config file if specified
 lando mysql -e "show variables;" | grep table_open_cache | grep 513
 ```
 
-Destroy tests
--------------
+## Destroy tests
 
 Run the following commands to trash this app like nothing ever happened.
 

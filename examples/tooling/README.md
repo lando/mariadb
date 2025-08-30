@@ -1,12 +1,10 @@
-MariaDB Tooling Example
-=======================
+# MariaDB Tooling Example
 
 This example exists primarily to test the following documentation:
 
-* [MariaDB Service](https://docs.devwithlando.io/tutorials/mariadb.html)
+* [MariaDB Service](https://docs.lando.dev/plugins/mariadb)
 
-Start up tests
---------------
+## Start up tests
 
 Run the following commands to get up and running with this example.
 
@@ -16,8 +14,7 @@ lando poweroff
 lando start
 ```
 
-Verification commands
----------------------
+## Verification commands
 
 Run the following commands to validate things are rolling as they should.
 
@@ -26,8 +23,7 @@ Run the following commands to validate things are rolling as they should.
 lando db-export-test --stdout | grep -vz "Deprecated"
 ```
 
-Destroy tests
--------------
+## Destroy tests
 
 Run the following commands to trash this app like nothing ever happened.
 

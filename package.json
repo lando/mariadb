@@ -1,7 +1,7 @@
 {
   "name": "@lando/mariadb",
   "description": "A Lando plugin that provides a tight integration with mariadb.",
-  "version": "1.7.0",
+  "version": "1.6.3",
   "author": "Mike Pirog @pirog",
   "license": "MIT",
   "repository": "lando/mariadb",
@@ -14,7 +14,7 @@
     "mariadb"
   ],
   "engines": {
-    "node": ">=18.0.0"
+    "node": ">=20.0.0"
   },
   "lando": {},
   "main": "index.js",
