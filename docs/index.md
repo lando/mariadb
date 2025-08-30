@@ -13,7 +13,7 @@ You can easily add it to your Lando app by adding an entry to the [services](htt
 ```yaml
 services:
   myservice:
-    type: mariadb
+    type: mariadb:11.4
 ```
 
 ## Supported versions

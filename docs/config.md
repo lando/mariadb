@@ -21,7 +21,7 @@ In the case of type and version, the underlying database files between these thi
 ```yaml
 services:
   myservice:
-    type: mariadb:11.7
+    type: mariadb:11.4
     portforward: false
     creds:
       user: mariadb
@@ -44,7 +44,7 @@ services:
 ```yaml
 services:
   myservice:
-    type: mariadb:11.7
+    type: mariadb:11.4
     portforward: true
 ```
 
@@ -53,7 +53,7 @@ services:
 ```yaml
 services:
   myservice:
-    type: mariadb:11.7
+    type: mariadb:11.4
     portforward: 3600
 ```
 
@@ -66,7 +66,7 @@ This means that if you change any of the `creds`, you need to `lando destroy` an
 ```yaml
 services:
   myservice:
-    type: mariadb:11.7
+    type: mariadb:11.4
     creds:
       user: mariadb -> myuser
       password: mariadb -> mypassword
