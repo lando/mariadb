@@ -8,8 +8,8 @@ const {name, version} = require('../../package.json');
 const landoPlugin = name.replace('@lando/', '');
 
 export default defineConfig({
-  title: 'Lando Mariadb Plugin',
-  description: 'The offical Lando plugin for Mariadb.',
+  title: 'Lando MariaDB Plugin',
+  description: 'The offical Lando plugin for MariaDB.',
   landoDocs: 3,
   landoPlugin,
   version,
