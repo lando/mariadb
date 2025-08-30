@@ -1,5 +1,7 @@
 ## {{ UNRELEASED_VERSION }} - [{{ UNRELEASED_DATE }}]({{ UNRELEASED_LINK }})
 
+## v1.7.0 - [August 30, 2025](https://github.com/lando/mariadb/releases/tag/v1.7.0)
+
 * Switched images to [bitnamilegacy](https://github.com/bitnami/containers/issues/83267) namespace
 * Updated `mariadb:11.4` to `11.4.7`
 
