@@ -1,7 +1,6 @@
 ---
 title: MariaDB Lando Plugin
 description: Add a highly configurable MariaDB service to Lando for local development with all the power of Docker and Docker Compose.
-next: ./config.html
 ---
 
 # MariaDB
