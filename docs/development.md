@@ -13,7 +13,7 @@ At the very least you will need to have the following installed:
 
 * [Lando 3.21.0+](https://docs.lando.dev/getting-started/installation.html) preferably installed [from source](https://docs.lando.dev/install/source.html).
 * [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
-* [Node 18](https://nodejs.org/dist/latest-v18.x/)
+* [Node 20](https://nodejs.org/dist/latest-v20.x/)
 
 ## Installation
 
@@ -122,7 +122,7 @@ Before running all or some of the tests you will need to generate them.
 npm run test:leia
 
 # Run the tests for a single example
-npx leia examples/mariadb-10.2/README.md -c 'Destroy tests'
+npx leia examples/10.2/README.md -c 'Destroy tests'
 ```
 
 If you've created new testable examples then you will also need to let GitHub Actions know so they can run on pull requests.
@@ -138,8 +138,8 @@ jobs:
       fail-fast: false
       matrix:
         leia-test:
-          - examples/2.1
-          - examples/2.2
+          - examples/10.2
+          - examples/10.3
 
 ```
 

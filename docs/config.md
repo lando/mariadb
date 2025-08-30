@@ -5,9 +5,9 @@ description: Learn how to configure the Lando MariaDB service.
 
 # Configuration
 
-Here are the configuration options, set to the default values, for this service. If you are unsure about where this goes or what this means, we *highly recommend* scanning the [services documentation](https://docs.lando.dev/core/v3/services/lando.html) to get a good handle on how the magicks work.
+Here are the configuration options, set to the default values, for this service. If you are unsure about where this goes or what this means, we *highly recommend* scanning the [services documentation](https://docs.lando.dev/services/lando-3.html) to get a good handle on how the magicks work.
 
-Also note that options, in addition to the [build steps](https://docs.lando.dev/core/v3/services/lando.html#build-steps) and [overrides](https://docs.lando.dev/core/v3/services/lando.html#overrides) that are available to every service, are shown below:
+Also note that options, in addition to the [build steps](https://docs.lando.dev/services/lando-3.html#build-steps) and [overrides](https://docs.lando.dev/services/lando-3.html#overrides) that are available to every service, are shown below:
 
 ::: warning Be careful when switching database type, version or credentials!
 You should be careful switching database `type`, `version` or `creds`.
@@ -21,7 +21,7 @@ In the case of type and version, the underlying database files between these thi
 ```yaml
 services:
   myservice:
-    type: mariadb:10.1
+    type: mariadb:11.7
     portforward: false
     creds:
       user: mariadb
@@ -44,7 +44,7 @@ services:
 ```yaml
 services:
   myservice:
-    type: mariadb
+    type: mariadb:11.7
     portforward: true
 ```
 
@@ -53,7 +53,7 @@ services:
 ```yaml
 services:
   myservice:
-    type: mariadb
+    type: mariadb:11.7
     portforward: 3600
 ```
 
@@ -66,7 +66,7 @@ This means that if you change any of the `creds`, you need to `lando destroy` an
 ```yaml
 services:
   myservice:
-    type: mariadb
+    type: mariadb:11.7
     creds:
       user: mariadb -> myuser
       password: mariadb -> mypassword
