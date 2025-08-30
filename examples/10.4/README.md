@@ -20,13 +20,13 @@ Run the following commands to validate things are rolling as they should.
 
 ```bash
 # Should use 10.4.34 as the default version
-lando exc defaults -- mariadb -V | grep 10.4.34
+lando exec defaults -- mariadb -V | grep 10.4.34
 
 # Should use the patch version when set by the user
-lando exc patch -- mariadb -V | grep 10.4.22
+lando exec patch -- mariadb -V | grep 10.4.22
 
 # Should use the correct default user pass db
-lando exc defaults -- mariadb -umariadb -pmariadb database -e quit
+lando exec defaults -- mariadb -umariadb -pmariadb database -e quit
 ```
 
 ## Destroy tests
