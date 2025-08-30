@@ -26,7 +26,7 @@ lando exec defaults -- mysql -V | grep 10.1.47
 lando exec patch -- mysql -V | grep 10.1.45
 
 # Should use the correct default user pass db
-lando exec defaults -c mysql -umariadb -pmariadb database -e quit
+lando exec defaults -- mysql -umariadb -pmariadb database -e quit
 ```
 
 ## Destroy tests
