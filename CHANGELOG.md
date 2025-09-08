@@ -1,5 +1,7 @@
 ## {{ UNRELEASED_VERSION }} - [{{ UNRELEASED_DATE }}]({{ UNRELEASED_LINK }})
 
+## v1.8.0 - [September 8, 2025](https://github.com/lando/mariadb/releases/tag/v1.8.0)
+
 * Added support for MariaDB 11.8
 
 ## v1.7.0 - [August 30, 2025](https://github.com/lando/mariadb/releases/tag/v1.7.0)
