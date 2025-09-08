@@ -17,22 +17,21 @@ services:
 
 ## Supported versions
 
+*   [11.8](https://hub.docker.com/r/bitnamilegacy/mariadb/tags?name=11.8.)
 *   [11.4](https://hub.docker.com/r/bitnamilegacy/mariadb/tags?name=11.4.)
 *   [10.11](https://hub.docker.com/r/bitnamilegacy/mariadb/tags?name=10.11.)
 *   [10.6](https://hub.docker.com/r/bitnamilegacy/mariadb/tags?name=10.6.)
-*   [10.5](https://hub.docker.com/r/bitnamilegacy/mariadb/tags?name=10.5.)
-*   [10.3](https://hub.docker.com/r/bitnamilegacy/mariadb/tags?name=10.3.)
 *   [custom](https://docs.lando.dev/services/lando-3.html#overrides)
 
-## Legacy versions
+## Unsupported versions
 
 ::: warning Using Unsupported MariaDB Versions!
-While you can currently use some [EOL MariaDB version](https://endoflife.date/mariadb) with Lando, it's worth noting that we also do not support such versions, so your mileage may vary. If you are having issues with unsupported versions and open a ticket about it, the most likely response you will get is "upgrade to a supported version".
+While you can currently use some [unsupported MariaDB versions](https://endoflife.date/mariadb) with Lando, it's worth noting that we also do not support such versions, so your mileage may vary. If you are having issues with unsupported versions and open a ticket about it, the most likely response you will get is "upgrade to a supported version".
 :::
 
-You can still run these versions with Lando but for all intents and purposes they should be considered deprecated (e.g. YMMV and do not expect a ton of support if you have an issue).
+You can still run these versions with Lando but for all intents and purposes they should be considered unsupported.
 
-*   [11.8](https://hub.docker.com/r/bitnamilegacy/mariadb/tags?name=11.8.)
+
 *   [11.7](https://hub.docker.com/r/bitnamilegacy/mariadb/tags?name=11.7.)
 *   [11.6](https://hub.docker.com/r/bitnamilegacy/mariadb/tags?name=11.6.)
 *   [11.5](https://hub.docker.com/r/bitnamilegacy/mariadb/tags?name=11.5.)
@@ -44,7 +43,9 @@ You can still run these versions with Lando but for all intents and purposes the
 *   [10.9](https://hub.docker.com/r/bitnamilegacy/mariadb/tags?name=10.9.)
 *   [10.8](https://hub.docker.com/r/bitnamilegacy/mariadb/tags?name=10.8.)
 *   [10.7](https://hub.docker.com/r/bitnamilegacy/mariadb/tags?name=10.7.)
+*   [10.5](https://hub.docker.com/r/bitnamilegacy/mariadb/tags?name=10.5.)
 *   [10.4](https://hub.docker.com/r/bitnamilegacy/mariadb/tags?name=10.4.)
+*   [10.3](https://hub.docker.com/r/bitnamilegacy/mariadb/tags?name=10.3.)
 *   [10.2](https://hub.docker.com/r/bitnamilegacy/mariadb/tags?name=10.2.)
 *   [10.1](https://hub.docker.com/r/bitnamilegacy/mariadb/tags?name=10.1.)
 
