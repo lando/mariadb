@@ -35,6 +35,7 @@ jobs:
           - examples/11.2
           - examples/11.3
           - examples/11.4
+          - examples/12.3
           - examples/custom
           - examples/tooling
     steps:

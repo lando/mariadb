@@ -1,5 +1,9 @@
 ## {{ UNRELEASED_VERSION }} - [{{ UNRELEASED_DATE }}]({{ UNRELEASED_LINK }})
 
+* Added support for MariaDB 12.3 using the [official MariaDB images](https://hub.docker.com/_/mariadb)
+* Added `mysql*` compatibility commands to official MariaDB images
+* Added automatic in-place upgrade when switching an existing `mariadb:11.x` service to `mariadb:12.3`
+
 ## v1.8.0 - [September 8, 2025](https://github.com/lando/mariadb/releases/tag/v1.8.0)
 
 * Added support for MariaDB 11.8

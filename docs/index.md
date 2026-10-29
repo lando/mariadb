@@ -17,6 +17,7 @@ services:
 
 ## Supported versions
 
+*   [12.3](https://hub.docker.com/_/mariadb/tags?name=12.3.)
 *   [11.8](https://hub.docker.com/r/bitnamilegacy/mariadb/tags?name=11.8.)
 *   [11.4](https://hub.docker.com/r/bitnamilegacy/mariadb/tags?name=11.4.)
 *   [10.11](https://hub.docker.com/r/bitnamilegacy/mariadb/tags?name=10.11.)
@@ -63,5 +64,5 @@ services:
     type: mariadb:11.7.1
 ```
 
-But make sure you use one of the available [patch tags](https://hub.docker.com/r/bitnamilegacy/mariadb/tags) for the underlying image we are using.
+But make sure you use one of the available patch tags for the underlying image we are using. MariaDB 12.3 and newer use the [official MariaDB images](https://hub.docker.com/_/mariadb/tags) while older versions use the [bitnamilegacy images](https://hub.docker.com/r/bitnamilegacy/mariadb/tags).
 

@@ -9,12 +9,13 @@ module.exports = {
   name: 'mariadb',
   config: {
     version: '10.3',
-    supported: ['11.8', '11.7', '11.6', '11.5', '11.4', '11.3', '11.2',
+    supported: ['12.3', '11.8', '11.7', '11.6', '11.5', '11.4', '11.3', '11.2',
       '11.1', '11.0', '10.11', '10.10', '10.9', '10.8', '10.7', '10.6',
       '10.5', '10.4', '10.3', '10.2', '10.1'],
     legacy: ['11.7', '11.6', '11.5', '11.3', '11.2', '11.1', '11.0',
       '10.10', '10.9', '10.8', '10.7', '10.4', '10.3', '10.2', '10.1'],
     pinPairs: {
+      '12.3': 'mariadb:12.3.3',
       '11.8': 'bitnamilegacy/mariadb:11.8.3-debian-12-r0',
       '11.7': 'bitnamilegacy/mariadb:11.7.2-debian-12-r0',
       '11.6': 'bitnamilegacy/mariadb:11.6.2-debian-12-r0',
@@ -55,15 +56,20 @@ module.exports = {
   builder: (parent, config) => class LandoMariaDb extends parent {
     constructor(id, options = {}) {
       options = _.merge({}, config, options);
+
+      // MariaDB 12+ uses the official images, older versions stay on bitnamilegacy
+      const official = parseInt(options.version, 10) >= 12;
+      if (official) options.remoteFiles.database = '/etc/mysql/conf.d/zz-lando.cnf';
+
       // Ensure the non-root backup perm sweep runs
       // NOTE: we guard against cases where the UID is the same as the bitnami non-root user
       // because this messes things up on circle ci and presumably elsewhere and _should_ be unncessary
-      if (_.get(options, '_app._config.uid', '1000') !== '1001') options._app.nonRoot.push(options.name);
+      if (!official && _.get(options, '_app._config.uid', '1000') !== '1001') options._app.nonRoot.push(options.name);
 
       if (!options.healthcheck) options.healthcheck = require('../utils/get-default-healthcheck')(options);
 
       const mariadb = {
-        image: `bitnamilegacy/mariadb:${options.version}`,
+        image: official ? `mariadb:${options.version}` : `bitnamilegacy/mariadb:${options.version}`,
         command: '/launch.sh',
         environment: {
           ALLOW_EMPTY_PASSWORD: 'yes',
@@ -77,9 +83,17 @@ module.exports = {
         volumes: [
           `${options.confDest}/launch.sh:/launch.sh`,
           `${options.confDest}/${options.defaultFiles.database}:${options.remoteFiles.database}`,
-          `${options.data}:/bitnami/mariadb`,
+          // NOTE: official images use /var/lib/mysql/data as datadir (set in launch.sh) so the layout
+          // matches bitnami and data from older bitnami based versions can be upgraded in place
+          `${options.data}:${official ? '/var/lib/mysql' : '/bitnami/mariadb'}`,
         ],
       };
+
+      // Official images use a different env var for passwordless root and can upgrade older data on start
+      if (official) {
+        mariadb.environment.MARIADB_ALLOW_EMPTY_ROOT_PASSWORD = '1';
+        mariadb.environment.MARIADB_AUTO_UPGRADE = '1';
+      }
 
       // Send it downstream
       super(id, options, {services: _.set({}, options.name, mariadb)});

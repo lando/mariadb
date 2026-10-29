@@ -1,0 +1,38 @@
+name: lando-mariadb-123
+services:
+  database:
+    type: mariadb:12.3
+  patch:
+    type: mariadb:12.3.2
+  custom:
+    type: mariadb:12.3
+    creds:
+      user: pirog
+      password: password
+      database: stuff
+    config:
+      database: config/my.cnf
+
+proxy:
+  database:
+    - hostname: db.lndo.site
+      port: 3306
+
+tooling:
+  'db-export-test [file]':
+    service: :host
+    cmd: '/helpers/sql-export.sh'
+    user: 'root'
+    options:
+      host:
+        description: The database service to use
+        default: database
+        alias:
+          - h
+      stdout:
+        description: Dump database to stdout
+
+# This is important because it lets lando know to test against the plugin in this repo
+# DO NOT REMOVE THIS!
+plugins:
+  "@lando/mariadb": ../..
